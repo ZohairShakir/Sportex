@@ -1,0 +1,81 @@
+.create-match-page {
+  min-height: 100vh;
+  background: #f6f8fb;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 1rem 2rem;
+}
+
+.create-card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.create-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.create-card label {
+  color: black;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+.create-card input,
+.create-card select {
+  background-color: whitesmoke;
+  color: black;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+.create-card input:focus,
+.create-card select:focus {
+  border-color: #2ecc71;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.create-match-btn {
+  width: 100%;
+  margin-top: 26px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.create-match-btn:hover {
+  background: #27c466;
+}
