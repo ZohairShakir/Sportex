@@ -30,9 +30,17 @@ export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(true); 
   const [loading, setLoading] = useState(false);
 
   const handleSignup = async (e) => {
+    await setPersistence(
+  auth,
+  remember ? browserLocalPersistence : browserSessionPersistence
+);
+
+await createUserWithEmailAndPassword(auth, email, password);
+
     e.preventDefault();
     setLoading(true);
 
@@ -104,13 +112,24 @@ export default function Signup() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          <div className="remember-me">
+            <label>
+              <input
+                type="checkbox"
+                checked={remember}
+                onChange={(e) => setRemember(e.target.checked)}
+              />
+              <span>Remember me</span>
+            </label>
+          </div>
+
           <div className="social-auth">
           <button
               className="social-btn"
               onClick={signInWithGoogle}
               aria-label="Continue with Google"
             >
-              <img src="/icons/google.svg" alt="Google" />
+              <img src="/icons/google.svg" alt= "Google" />
             </button>
           
             <button

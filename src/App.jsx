@@ -7,7 +7,9 @@ import ProfilePage from "./pages/ProfilePage";
 import CreateMatch from "./pages/CreateMatch";
 import CreateProfile from "./pages/CreateProfile";
 import Discovery from "./pages/Discovery";
+import Apply from "./pages/ApplyPage";
 function App() {
+  
   return (
     <Router>
       <Routes>
@@ -19,6 +21,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/create-profile" element={<CreateProfile />} />
         <Route path="/discover" element={<Discovery />} />
+        <Route path="/apply" element={<Apply />} />
       </Routes>
     </Router>
   );

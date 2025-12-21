@@ -4,8 +4,14 @@ import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import "./Login.css";
 import logo from "../assets/logo.png";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";  
 import {googleProvider, appleProvider } from "../firebase";
+import {
+  setPersistence,
+  browserLocalPersistence,
+  browserSessionPersistence,
+} from "firebase/auth";
+
 
 export const signInWithGoogle = async () => {
   try {
@@ -28,12 +34,18 @@ export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(true);
   const [loading, setLoading] = useState(false);
   
   const handleLogin = async (e) => {
+    
     e.preventDefault();
     setLoading(true);
     try {
+      await setPersistence(
+        auth,
+        remember ? browserLocalPersistence : browserSessionPersistence
+      );
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/home");
     } catch (err) {
@@ -80,6 +92,16 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          <div className="remember-me">
+            <label>
+              <input
+                type="checkbox"
+                checked={remember}
+                onChange={(e) => setRemember(e.target.checked)}
+              />
+              <span>Remember me</span>
+            </label>
+          </div>
           <div className="social-auth">
   <button
     className="social-btn"

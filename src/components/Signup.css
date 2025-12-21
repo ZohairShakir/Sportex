@@ -125,6 +125,25 @@
   gap: 18px;
   margin-top: 24px;
 }
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.remember-me label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.remember-me input {
+  accent-color: #2bee79; /* your signature green */
+  cursor: pointer;
+}
 
 .social-btn {
   width: 52px;

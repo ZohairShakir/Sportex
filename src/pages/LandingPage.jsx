@@ -182,7 +182,7 @@ const Sportex = () => {
                   <h3>Join as Developer</h3>
                   <p>Help us build the scalable infrastructure that powers thousands of athletic connections daily.</p>
                 </div>
-                <a href="#" className="career-link">
+                <a href="#" className="career-link" onClick={() => navigate("/apply")}>
                   View Openings
                   <span className="material-symbols-outlined">arrow_forward</span>
                 </a>
@@ -200,7 +200,7 @@ const Sportex = () => {
                   <h3>Join the Team</h3>
                   <p>Marketing, Sales, Operations. If you love sports and tech, we have a place for you.</p>
                 </div>
-                <a href="#" className="career-link">
+                <a href="#" className="career-link" onClick={() => navigate("/apply")}>
                   See All Roles
                   <span className="material-symbols-outlined">arrow_forward</span>
                 </a>
