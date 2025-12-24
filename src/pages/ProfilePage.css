@@ -114,3 +114,39 @@
   font-size: 12px;
   color: #6b7280;
 }
+/* ===== PROFILE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .profile-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-stats {
+    gap: 20px;
+  }
+
+  .profile-stats span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 18px;
+  }
+
+  .avatar {
+    width: 72px;
+    height: 72px;
+    font-size: 28px;
+  }
+
+  .profile-top h2 {
+    font-size: 22px;
+  }
+
+  .profile-section h3 {
+    font-size: 18px;
+  }
+}

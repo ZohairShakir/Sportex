@@ -146,5 +146,98 @@
   transition: color 0.2s ease;
   user-select: none;
 }
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+   ========================= */
+
+/* Tablets & small laptops */
+@media (max-width: 768px) {
+  .login-card {
+    width: 90%;
+    max-width: 380px;
+    padding: 35px 40px;
+  }
+
+  .login-card h2 {
+    font-size: 26px;
+  }
+
+  .logo-img {
+    width: 75px;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .login-card {
+    width: 100%;
+    padding: 28px 22px;
+    border-radius: 10px;
+  }
+
+  .login-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .login-card input {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  .login-card button {
+    font-size: 15px;
+    padding: 11px;
+  }
+
+  .switch-text {
+    font-size: 13px;
+  }
+
+  .social-auth {
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .social-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+  }
+
+  .social-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .remembertext {
+    font-size: 0.8rem;
+  }
+
+  .logo-img {
+    width: 65px;
+    top: 16px;
+    left: 16px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .login-card h2 {
+    font-size: 22px;
+  }
+
+  .login-card {
+    padding: 24px 18px;
+  }
+}
 
 
