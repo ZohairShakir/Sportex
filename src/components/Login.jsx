@@ -99,7 +99,9 @@ export default function Login() {
                 checked={remember}
                 onChange={(e) => setRemember(e.target.checked)}
               />
-              <span>Remember me</span>
+              <div className="remembertext">
+                <span>Remember  me</span>  
+              </div>
             </label>
           </div>
           <div className="social-auth">

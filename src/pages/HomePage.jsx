@@ -27,7 +27,15 @@ const getNextRank = (xp) => {
 export default function HomePage() {
   const navigate = useNavigate();
   const [matches, setMatches] = useState([]);
+  const getGreeting = () => {
+  const hour = new Date().getHours();
+  if (hour < 12) return "Good Morning";
+  if (hour < 18) return "Good Afternoon";
+  return "Good Evening";
+};
+
   const [search, setSearch] = useState("");
+  const [userName, setUserName] = useState("");
   const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [recentMatches, setRecentMatches] = useState([]);
   const [userRank, setUserRank] = useState({
@@ -89,6 +97,18 @@ export default function HomePage() {
     setStats({ hosted, joined, upcoming });
   });
 }, []);
+useEffect(() => {
+  if (!auth.currentUser) return;
+
+  const userRef = ref(rtdb, `users/${auth.currentUser.uid}`);
+
+  onValue(userRef, (snapshot) => {
+    if (snapshot.exists()) {
+      setUserName(snapshot.val().name || "");
+    }
+  });
+}, []);
+
   useEffect(() => {
   if (!auth.currentUser) return;
 
@@ -257,6 +277,16 @@ export default function HomePage() {
     <div className="home-container">
       <div className="page-wrapper">
         <div className="page-container">
+          {/* GREETING SECTION */}
+<div className="greeting-section">
+  <h1>
+    {getGreeting()}
+    {userName && <span>, {userName}</span>}
+  </h1>
+  <p className="greeting-sub">
+    Ready to play, compete, and level up today?
+  </p>
+</div>
 
           {/* QUICK STATS */}
           <div className="quick-stats">

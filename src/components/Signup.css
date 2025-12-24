@@ -128,22 +128,29 @@
 .remember-me {
   display: flex;
   align-items: center;
-  margin-top: 0.75rem;
-}
-
-.remember-me label {
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  margin: 0.75rem 0;
   cursor: pointer;
 }
 
-.remember-me input {
-  accent-color: #2bee79; /* your signature green */
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2bee79; /* Sportex green */
   cursor: pointer;
 }
+
+.remembertext {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1C2C22;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+
 
 .social-btn {
   width: 52px;

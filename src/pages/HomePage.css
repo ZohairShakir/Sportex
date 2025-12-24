@@ -126,6 +126,27 @@
   padding: 12px 26px;
   font-size: 16px;
 }
+.greeting-section {
+  margin-top: 4.5rem; /* space below navbar */
+  margin-bottom: 2rem;
+}
+
+.greeting-section h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1c2c22;
+}
+
+.greeting-section h1 span {
+  color: var(--primary);
+}
+
+.greeting-sub {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #6b7c72;
+}
+
 .quick-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
